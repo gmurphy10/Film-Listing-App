@@ -19,15 +19,17 @@ function getMovies(url) {
 }
 
 function showMovies(data) {
+
   data.forEach(movie => {
+      const {title, poster_path, vote_average, overview} = movie
       const movieEl = document.createElement('div');
       movieEl.classList.add('movie');
       movie.El.innerHTML = `
-      <img src="https://images.unsplash.com/photo-1590179068383-b9c69aacebd3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80" alt="image">
+      <img src="${IMG_URL+poster_path}" alt="${title}">
 
         <div class ="movie-info">
-            <h3>Movie Title</h3>
-            <span class="green">9.8</span>
+            <h3>${title}</h3>
+            <span class="green">${vote_average}</span>
         </div>
 
         <div class="overview">
