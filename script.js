@@ -29,12 +29,12 @@ function showMovies(data) {
 
         <div class ="movie-info">
             <h3>${title}</h3>
-            <span class="green">${vote_average}</span>
+            <span class="${getColor(vote_average)}">${vote_average}</span>
         </div>
 
         <div class="overview">
             <h3>Overview</h3>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+            ${overview}
         </div>
       `
   })
